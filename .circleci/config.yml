@@ -33,8 +33,8 @@ workflows:
   say-hello-workflow:
     jobs:
       - build
-      - test
-      - deploy:
+      - test:
           filters:
-            branches:
-              only: deploy
+            tags:
+              only: test
+      - deploy
