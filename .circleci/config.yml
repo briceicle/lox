@@ -11,7 +11,8 @@ workflows:
       - path-filtering/filter:
           name: check-updated-files
           mapping: |
-            src/com/craftinginterpreters/lox/.* run-build-service-1-job true
-            src/com/craftinginterpreters/tool/.* run-build-service-2-job true
+            service1/.* run-build-service-1-job true
+            service2/.* run-build-service-2-job true
           base-revision: main
           config-path: .circleci/continue_config.yml
+          circleci_domain: k9s.sphereci.com
