@@ -27,11 +27,11 @@ jobs:
       - checkout
       - run:
           name: "Deploy"
-          command: "echo deploys"
+          command: "sleep 1m"
 
 workflows:
   say-hello-workflow:
     jobs:
       - build
       - test
-      - deployment
+      - deploy
