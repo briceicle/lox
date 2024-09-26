@@ -13,6 +13,6 @@ workflows:
           mapping: |
             service1/.* run-build-service-1-job true
             service2/.* run-build-service-2-job true
-          base-revision: main
+          base-revision: path-filtering
           config-path: .circleci/continue_config.yml
           circleci_domain: k9s.sphereci.com
