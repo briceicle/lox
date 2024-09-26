@@ -9,10 +9,9 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: echo $CCI_TEST_ENV_VAR
+          command: echo hello
 
 workflows:
-  say-hello-workflow:
+  main:
     jobs:
       - say-hello:
-          context: cci-test-org-context
