@@ -34,13 +34,3 @@ workflows:
     jobs:
       - build
       - test
-  scheduled-workflow:
-    triggers:
-      - schedule:
-          cron: "* * * * *"
-          filters:
-            branches:
-              only:
-                - circleci-project-setup
-    jobs:
-      - deploy
